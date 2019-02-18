@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Change Style</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function changeStyle() {
+
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+            var color = document.getElementById('color').value;
+
+            document.getElementById('square').style.width = width + "px";
+            document.getElementById('square').style.height = height + "px";
+            document.getElementById('square').style.backgroundColor = color;
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card col-sm-4">
+                <div class="card-header">
+                    <h4>Setting</h4>
+                </div>
+                <div class="card-body">
+                    Width
+                    <input type="number" id="width" class="form-control">
+                    Height
+                    <input type="number" id="height" class="form-control">
+                    Background
+                    <input type="color" id="color" class="form-control">
+                    <button type="button" class="btn btn-success btn-block" onclick=changeStyle();>
+                        Set
+                    </button>
+                </div>
+            </div>
+            <div class="card col-sm-8">
+                <div class="card-header">
+                    Result
+                </div>
+                <div class="card-body">
+                    <div id="square"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

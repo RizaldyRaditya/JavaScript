@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Value</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function hitung() {
+            var panjang = document.getElementById('panjang').value;
+            var lebar = document.getElementById('lebar').value;
+
+            var hasil = panjang * lebar;
+            document.getElementById('hasil').value = hasil;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    Hitung Luas Persegi Panjang
+                </h4>
+            </div>
+            <div class="card-body">
+                Panjang
+                <input type="number" id="panjang" class="form-control">
+                Lebar
+                <input type="number" id="lebar" class="form-control">
+                <button type="button" class="btn btn-info btn-block" onclick="hitung();">Hitung</button>
+                Hasil
+                <input type="text" id="hasil" class="form-control" readonly>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

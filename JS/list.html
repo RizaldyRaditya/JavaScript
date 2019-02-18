@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Value</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function ChangeBackground(color) {
+            var element = document.getElementById('pesan');
+            element.className = "";
+            element.classList.add("alert");
+            element.classList.add("alert-" + color);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card col-sm-12">
+                    <div class="card-header bg-success text-white">
+                        <h4>Alert Setting</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="pesan" class="alert alert-light">
+                            <Strong>Urgent!</Strong>
+                            Jangan lupa senyum hari ini :)
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <select class="form-control" onchange="ChangeBackground(this.value);">
+                            <option value="light">Default</option>
+                            <option value="primary">Primary</option>
+                            <option value="danger">Danger</option>
+                            <option value="warning">Warning</option>
+                            <option value="success">Success</option>
+                            <option value="dark">Dark</option>
+                            <option value="secondary">Secondary</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
